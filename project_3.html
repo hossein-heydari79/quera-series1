@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let a = prompt("Enter a: ");
+    let b = prompt("Enter b: ");
+    let c = prompt("Enter c: ");
+
+    let sum = 0;
+    let arr_a = a.split("");
+    let len = arr_a.length - 1;
+    let arr_c = new Array();
+    let txt = "";
+
+
+    for (let i = 0; i < arr_a.length; i++) {
+        sum += arr_a[i] * (b ** len);
+        len -= 1;
+    }
+
+    while (sum / c) {
+        arr_c.push(sum % c);
+        sum = sum / c;
+        sum = parseInt(sum);
+    }
+
+    for (let i = arr_c.length - 1; i >= 0; i--) {
+        txt = txt + arr_c[i];
+    }
+
+
+    console.log(txt);
+</script>
+
+</html>

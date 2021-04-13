@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let a = prompt("Enter a: ");
+    let b = prompt("Enter b: ");
+    let c = prompt("Enter c: ");
+    a = parseInt(a);
+    b = parseInt(b);
+    c = parseInt(c);
+    let txt = "";
+
+    let x = [];
+    let y = [];
+    let q = [];
+
+    for (let i = 0; i < a; i++) {
+        x.push([]);
+        q.push([]);
+    }
+    for (let i = 0; i < b; i++) {
+        y.push([]);
+    }
+
+    for (let i = 0; i < a; i++) {
+        for (let h = 0; h < c; h++) {
+            q[i][h] = 0;
+        }
+    }
+
+
+    for (let i = 0; i < a; i++) {
+        for (let h = 0; h < b; h++) {
+            x[i][h] = parseInt(prompt("Enter your Array 1: "));
+        }
+    }
+
+    for (let i = 0; i < b; i++) {
+        for (let h = 0; h < c; h++) {
+            y[i][h] = parseInt(prompt("Enter your Array 2: "));
+        }
+    }
+
+
+
+    for (let i = 0; i < a; i++) {
+        for (let h = 0; h < c; h++) {
+            for (let k = 0; k < b; k++) {
+                q[i][h] += x[i][k] * y[k][h];
+            }
+        }
+    }
+
+    for (let i = 0; i < a; i++) {
+        for (let h = 0; h < c; h++) {
+            txt = txt + q[i][h] + " ";
+        }
+        console.log(txt);
+        txt = "";
+    }
+</script>
+
+</html>

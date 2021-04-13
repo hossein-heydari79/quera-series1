@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let n = prompt("Enter n: ");
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let a = parseFloat(prompt("Enter i: "));
+        a = a || 0;
+        arr.push(a);
+    }
+
+    let a = arr[0];
+    let b = arr[0];
+    let c = 0;
+    for (let i = 1; i < arr.length; i++) {
+        if (a > arr[i]) {
+            continue;
+        } else {
+            a = arr[i];
+        }
+    }
+
+    for (let i = 1; i < arr.length; i++) {
+        if (b < arr[i]) {
+            continue;
+        } else {
+            b = arr[i];
+        }
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+        c = c + arr[i];
+    }
+
+    c = parseFloat(parseFloat(c) / arr.length);
+
+    console.log("Max: ", parseFloat(a).toFixed(3));
+    console.log("Min: ", parseFloat(b).toFixed(3));
+    console.log("Avg: ", c.toFixed(3));
+</script>
+
+</html>
